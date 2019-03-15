@@ -1,0 +1,201 @@
+<template>
+    <div class="search">
+        <ul class="search-nav border-bottom">
+            <li class="nav-item active">国内·港澳台</li>
+            <li class="nav-item">海外</li>
+        </ul>
+        <div class="search-input">
+            <div class="address add-left">北京</div>
+            <div class="address add-right">我的位置</div>
+        </div>
+        <div class="search-time">
+            <div class="search-time-input border-bottom">
+                <div>03月06日<span>今天 入住</span></div>
+                <div>03月07日<span>明天 离店 共一晚</span></div>
+            </div>
+        </div>
+        <div class="search-filter">
+            <div class="border-bottom">
+                <input type="text" placeholder="搜索酒店名、地名、地标">
+
+            </div>
+        </div>
+        <div class="search-commit">
+            <div class="btn">搜索</div>
+        </div>
+        <div class="my border-topbottom">
+            <span class="my-item">最近浏览</span>
+            <span class="my-item">我的订单</span>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'HotelSearch',
+    data () {
+        return {
+        };
+    },
+    components: {},
+    computed: {},
+    methods: {}
+}
+
+</script>
+
+<style lang="stylus" scoped>
+.search
+    position relative
+    background #fff 
+    font-size 18px
+    text-align center
+    width 94.5%
+    margin 0 auto 
+    margin-top -55px
+    padding 0 .4rem
+    box-sizing border-box
+    .search-nav
+        height 1.12rem
+        background #ffffff
+        display flex 
+        justify-content center
+        align-items center
+        .nav-item 
+            flex 1
+            color #000
+            text-align center
+            font-size 18px
+            position relative
+            box-sizing border-box
+            margin .2rem 0
+            height .72rem
+            line-height .6rem
+        .nav-item + .nav-item 
+            border-left 1px solid #eee
+        .active
+            &:after 
+                content ''
+                position absolute
+                bottom 1px
+                left 50%
+                display block
+                margin-left -1rem
+                width 2rem
+                height 4px
+                background #00bcd4
+                border-radius 4px
+                z-index 1
+    .search-input 
+        display flex
+        justify-content space-between
+        align-items center
+        height 1.2rem
+
+        .address
+            flex 1
+            font-size .48rem
+            line-height .9rem
+            font-weight normal 
+            color #212121
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+        .add-left
+            text-align left 
+        .add-right 
+            text-align right
+            font-size 14px
+            line-height 1.5rem
+            color #607d8b
+        img     
+            width 1rem
+            height .9rem
+    .search-time 
+        text-align left 
+        font-size: 20px
+        line-height: .6rem
+        height: 1.2rem
+        background: #fff
+        .search-time-input 
+            display flex 
+            align-items flex-start 
+            justify-content center
+            flex-direction column
+            div
+                color: #000
+                font-size: 15px
+                span 
+                    font-size 12px
+                    color #888
+    .search-filter
+        display flex 
+        position relative
+        height 1.2rem
+        line-height 1.2rem
+        .search-desc
+            text-align left 
+            color #888
+            font-size 15px
+            flex 1
+        .r-ct
+            flex 1
+            display flex
+            justify-content flex-end
+            align-items center 
+        .search-filter-btn
+            display: inline-block;
+            position: relative;
+            width: 1rem;
+            height: .6rem;
+            padding: .01rem;
+            border-radius: .32rem;
+            background-color: #ccc;
+            vertical-align: middle;
+            .handle 
+                position: absolute;
+                z-index: 1000;
+                top: 1px;
+                left: 1px;
+                width: .56rem;
+                height: .56rem;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+                transition: transform .1s ease-out;
+                &:after 
+                    display none
+                    position: absolute;
+                    left: .15rem;
+                    content: " ";
+                    width: .34rem;
+                    height: .28rem;
+                    box-sizing border-box
+                    background-color: #fafafa;
+                    border-radius: 0 .15rem .15rem 0;
+                    transition: transform .13s ease-out;
+    .search-commit
+        background #fff 
+        padding 10px 0 17px 0
+        .btn
+            border-radius 4px
+            background-color: #ff9800
+            height: 40px
+            line-height: 40px
+            color: #fff
+            font-size 18px
+            font-weight bold
+    .my 
+        height 1rem
+        display flex 
+        justify-content center
+        align-items center
+        .my-item
+            flex 1
+            font-size 14px
+            color #607d8b
+            height 1rem
+            line-height 1rem
+            + .my-item
+                border-left 1px solid #eee
+</style>
