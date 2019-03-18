@@ -5,7 +5,6 @@
         <detail-base-info :list="baseInfoList"></detail-base-info>
         <detail-promote v-show="showPromote" :list="promoteList"></detail-promote>
         <detail-list :list="list"></detail-list>
-        <div style="height:1000px"></div>
         <common-footer></common-footer>
         <common-copyright></common-copyright>
         
